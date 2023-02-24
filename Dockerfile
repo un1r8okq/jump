@@ -1,7 +1,6 @@
 FROM debian:bookworm-slim
 WORKDIR /root
 
-COPY ./src /
 
 RUN apt-get update && \
     apt-get upgrade --yes && \
@@ -13,7 +12,11 @@ RUN apt-get update && \
     # Don't persist APT lists to the Docker image layer
     rm -rf /var/lib/apt/lists/* && \
     # Add directory needed by sshd to run
-    mkdir /var/run/sshd && \
+    mkdir /var/run/sshd
+
+COPY ./src /
+
+RUN echo && \
     # Disable the root user
     usermod -s /usr/sbin/nologin root && \
     # Add users so they can SSH into the box

@@ -1,5 +1,7 @@
 Include /etc/ssh/sshd_config.d/*.conf
 AcceptEnv LANG LC_*
+Banner /etc/ssh/banner
+PrintMotd no
 
 # Disable SSH protocol 1
 Protocol 2
