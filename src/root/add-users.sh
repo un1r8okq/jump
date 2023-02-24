@@ -2,6 +2,7 @@
 
 USERS=(
     "will:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOUGGwEzC97UyP+wTQeQb2mGJJ1XWJFa9/pEY+WwTK5k fantasticbox",
+    "odroid:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDc0RMp6xJMwSSV2b5Z7uRf5+VMHN9HxqwGt66TuZwA+ Odroid",
 )
 
 for USER in "${USERS[@]}"; {
