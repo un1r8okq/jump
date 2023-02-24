@@ -1,0 +1,7 @@
+services:
+  jump:
+    build: ./
+    ports:
+      - target: 22
+        published: 2222
+        protocol: tcp

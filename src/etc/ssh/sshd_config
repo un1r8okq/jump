@@ -1,0 +1,24 @@
+Include /etc/ssh/sshd_config.d/*.conf
+AcceptEnv LANG LC_*
+
+# Disable SSH protocol 1
+Protocol 2
+
+# Disconnect after 30 minutes of inactivity
+ClientAliveInterval 1800
+
+# Authentication options
+UsePAM yes
+PermitRootLogin no
+PasswordAuthentication no
+PermitEmptyPasswords no
+
+# Disable authentication methods we don't need
+ChallengeResponseAuthentication no
+GSSAPIAuthentication no
+KbdInteractiveAuthentication no
+KerberosAuthentication no
+
+# Services we don't need
+X11Forwarding no
+PrintMotd no
